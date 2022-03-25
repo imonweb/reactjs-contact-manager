@@ -19,6 +19,7 @@ const ContactCard = (props) => {
             marginTop: "7px",
             display: "flex",
           }}
+          onClick={() => props.clickHandler(id)}
           ></i> 
         </span>
      </div>
