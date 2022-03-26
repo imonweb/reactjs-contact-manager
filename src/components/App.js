@@ -4,9 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
  
 import './App.css';
 import Header from './Header';
-// import AddContact from './AddContact';
+import AddContact from './AddContact';
 import ContactList from './ContactList';
-import AContact from './AContact';
+// import AContact from './AContact';
 
 // const { uuid } = require('uuid');
 // console.log(uuidv4)
@@ -27,10 +27,10 @@ function App() {
     setContacts(newContactList)
   }
 
-  const addHandler = (name, email) => {
-    console.log(name, email);
-    setContacts([...contacts, {id: uuidv4(), name, email}])
-  }
+  // const addHandler = (name, email) => {
+  //   console.log(name, email);
+  //   setContacts([...contacts, {id: uuidv4(), name, email}])
+  // }
 
   useEffect(() => {
     const retrieveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -44,8 +44,8 @@ function App() {
   return (
     <div className='ui container'>
       <Header />
-      {/* <AddContact addContactHandler={addContactHandler}/> */}
-      <AContact onAcontact={addHandler}/>
+      <AddContact addContactHandler={addContactHandler}/>
+      {/* <AContact onAcontact={addHandler}/> */}
       <ContactList contacts={ contacts } getContactId={removeContactHandler}/>
     </div>
   );
