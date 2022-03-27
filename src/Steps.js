@@ -250,7 +250,13 @@ onClick={() => props.clickHandler(id)}
 
  <ContactCard contact={contact} clickHandler={deleteContactHandler} key={contact.id}/>
 
+
+/* ================== */
+/* React Router */
+/* ================== */
+
+npm install react-router-dom
+
  
-/* ====== */
-/* Router */
-/* ====== */
+/* ====== App.js ====== */
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
